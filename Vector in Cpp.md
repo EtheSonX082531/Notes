@@ -1,4 +1,4 @@
-* vectorname.push_back(value);
+*vectorname.push_back(value);
 
 *vectorname.pop_back(value);
 
@@ -11,6 +11,8 @@
 *sort(vectorname.begin(),vectorname.end(),greater<int>());
 
 *sort(vectorname.rbegin(),vectorname.rend());
+
+*stable_sort(v.begin(), v.end());
 
 *vectorname.size();
 
