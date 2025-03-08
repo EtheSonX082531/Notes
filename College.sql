@@ -33,3 +33,10 @@ SELECT * FROM student WHERE(city="Delhi") LIMIT 2;
 SELECT * FROM student ORDER BY city ASC;
 SELECT * FROM student ORDER BY marks ASC;
 SELECT * FROM student ORDER BY marks DESC LIMIT 3;
+
+SELECT city,COUNT(name) FROM student GROUP BY city;
+SELECT grade,COUNT(grade) FROM student GROUP BY grade;
+SELECT city,COUNT(name) FROM student GROUP BY city HAVING MAX(marks)>90;
+
+SELECT city FROM student WHERE(grade="A") GROUP BY city;
+
