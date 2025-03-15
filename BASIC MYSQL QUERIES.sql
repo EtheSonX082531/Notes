@@ -83,3 +83,35 @@ INSERT INTO student VALUES
 
 DELETE FROM student WHERE marks<10;
 
+CREATE TABLE dept(
+  id INT PRIMARY KEY,
+  name VARCHAR(50)
+  );
+  
+CREATE TABLE teacher(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES dept(id)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
+    );
+    
+    
+INSERT INTO dept (id,name) VALUES 
+(101,"English"),
+(102,"Math"),
+(103,"Biology"),
+(104,"Bangla");
+
+SELECT * FROM dept;
+
+
+INSERT INTO teacher(id,name,dept_id) VALUES 
+(1,"Puja CHowdhury",101),
+(2,"Anik roy",102),
+(3,"Dhiraj dhar dip",103);
+
+SELECT * FROM teacher;
+
+UPDATE dept SET id=110 WHERE id=102;
